@@ -52,19 +52,22 @@
 
 ## 🧩 Каталог поддерживаемых плат
 
-Ниже представлен реестр старых платформ, подлежащих архивному зеркалированию:
+Ниже представлен реестр старых платформ, подлежащих архивному зеркалированию.
+
+> 📖 **Полный каталог оборудования и релизов:** Подробные аппаратные характеристики плат, ссылки на официальные и архивные ресурсы,
+> конфигурацию сервисных переключателей и матрицу релизов смотрите в **[BOARDS_RU.md](./BOARDS_RU.md)**.
 
 ### Платформы Qualcomm Snapdragon (Ключевой приоритет)
 
-| Плата | Процессор (SoC) | Архитектура | Категории доступных релизов Linaro | Тег релиза / Статус |
-| :--- | :--- | :--- | :--- | :--- |
-| **DragonBoard 410c (DB410c)** | Snapdragon 410 (APQ8016E) | ARM64 (4x A53) | Debian (15.06–18.01), RPB, Android (5.1–8.1), Rescue, Win10 IoT | Запланирован (`db410c-*`) |
-| **DragonBoard 820c (DB820c)** | Snapdragon 820 (APQ8096) | ARM64 (4x Kryo) | Debian (16.06–18.01), RPB, Android (6.0–8.0), Загрузчики | Запланирован (`db820c-*`) |
-| **DragonBoard 845c / RB3** | Snapdragon 845 (SDA845) | ARM64 (8x Kryo) | Debian, Linux BSP, Android AOSP snapshots, Robotics | Запланирован (`db845c-*`) |
-| **Qualcomm Robotics RB5** | QRB5165 (SM8250) | ARM64 (8x Kryo) | Linaro Ubuntu BSP, Poky / Yocto, Fastboot Recovery | Запланирован (`rb5-*`) |
-| **Inforce 6309 (IFC6309)** | Snapdragon 410E (APQ8016E) | ARM64 (4x A53) | Linaro Linux BSP, Android BSP, Rescue Bootloader | Запланирован (`ifc6309-*`) |
-| **Inforce 6410 / 6410Plus** | Snapdragon 600 (APQ8064) | ARMv7 (4x Krait) | Linaro ALIP, Ubuntu, Android Releases, Fastboot Blobs | Запланирован (`ifc6410-*`) |
-| **Inforce 6540 / 6560** | Snapdragon 805 / SD660 | ARMv7 / ARM64 | Linaro Linux BSP, Android BSP, Загрузчики | Запланирован (`ifc6540-*`) |
+| Плата | Процессор (SoC) | Архитектура | Категории доступных релизов Linaro | Опубликованные релизы | Статус |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **DragonBoard 410c (DB410c)** | Snapdragon 410 (APQ8016E) | ARM64 (4x A53) | Debian 21.12 / 16.06, Android BSP 16.03, Прошивки (r1036, r1034, r1032), Rescue (21.12, 17.09), Boot Tools | [`db410c-rescue-21.12`](https://github.com/boardport/linaro-releases/releases/tag/db410c-rescue-21.12), [`db410c-debian-21.12`](https://github.com/boardport/linaro-releases/releases/tag/db410c-debian-21.12), [`db410c-firmware-r1036`](https://github.com/boardport/linaro-releases/releases/tag/db410c-firmware-r1036), [`db410c-firmware-r1034`](https://github.com/boardport/linaro-releases/releases/tag/db410c-firmware-r1034), [`db410c-firmware-r1032`](https://github.com/boardport/linaro-releases/releases/tag/db410c-firmware-r1032), [`db410c-rescue-17.09`](https://github.com/boardport/linaro-releases/releases/tag/db410c-rescue-17.09), [`db410c-boot-tools`](https://github.com/boardport/linaro-releases/releases/tag/db410c-boot-tools), [`db410c-debian-16.06`](https://github.com/boardport/linaro-releases/releases/tag/db410c-debian-16.06), [`db410c-android-16.03`](https://github.com/boardport/linaro-releases/releases/tag/db410c-android-16.03) | ✅ Завершен |
+| **DragonBoard 820c (DB820c)** | Snapdragon 820 (APQ8096) | ARM64 (4x Kryo) | Linaro Debian 21.12 (ядро 5.15), UFS Bootloader & Rescue сборка 83636, Qualcomm BSP Firmware r01700.1 | [`db820c-debian-21.12`](https://github.com/boardport/linaro-releases/releases/tag/db820c-debian-21.12), [`db820c-rescue-83636`](https://github.com/boardport/linaro-releases/releases/tag/db820c-rescue-83636), [`db820c-firmware-r01700`](https://github.com/boardport/linaro-releases/releases/tag/db820c-firmware-r01700) | ✅ Завершен |
+| **DragonBoard 845c / RB3** | Snapdragon 845 (SDA845) | ARM64 (8x Kryo) | Qualcomm BSP Firmware v4, Linaro UFS Rescue сборка 101, Linux RPB Console сборка 169 (ядро 5.1) | [`db845c-firmware-v4`](https://github.com/boardport/linaro-releases/releases/tag/db845c-firmware-v4), [`db845c-rescue-101`](https://github.com/boardport/linaro-releases/releases/tag/db845c-rescue-101), [`db845c-linux-rpb-169`](https://github.com/boardport/linaro-releases/releases/tag/db845c-linux-rpb-169) | ✅ Завершен |
+| **Qualcomm Robotics RB5** | QRB5165 (SM8250) | ARM64 (8x Kryo) | Linaro UFS Bootloader & Rescue сборка 27, QCOM LT Linux Kernel 5.13.9 Boot Image (сборка 708) | [`rb5-rescue-27`](https://github.com/boardport/linaro-releases/releases/tag/rb5-rescue-27), [`rb5-linux-5.13`](https://github.com/boardport/linaro-releases/releases/tag/rb5-linux-5.13) | ✅ Завершен |
+| **Qualcomm Robotics RB2** | QRB4210 (Dragonwing) | ARM64 (8x Kryo) | Linaro QCOM LT Debian Bookworm arm64 Boot Image (сборка 58915) | [`rb2-debian-bookworm`](https://github.com/boardport/linaro-releases/releases/tag/rb2-debian-bookworm) | ✅ Завершен |
+| **Inforce 6410 / 6410Plus** | Snapdragon 600 (APQ8064) | ARMv7 (4x Krait) | Linaro Debian 16.02 (ядро 4.4), Qualcomm BSP Firmware & eMMC Rescue, Linux Kernel 5.15 LTS (Headless) | [`ifc6410-debian-16.02`](https://github.com/boardport/linaro-releases/releases/tag/ifc6410-debian-16.02), [`ifc6410-firmware-rescue`](https://github.com/boardport/linaro-releases/releases/tag/ifc6410-firmware-rescue), [`ifc6410-linux-5.15`](https://github.com/boardport/linaro-releases/releases/tag/ifc6410-linux-5.15) | ✅ Завершен |
+| **Inforce 6309 (IFC6309)** | Snapdragon 410E (APQ8016E) | ARM64 (4x A53) | Совместим со стеком загрузчиков и прошивками DragonBoard 410c | См. [`db410c-*`](https://github.com/boardport/linaro-releases/releases?q=db410c) | Совместим |
 
 ### Другие исторические платы 96Boards (Вторая очередь)
 
